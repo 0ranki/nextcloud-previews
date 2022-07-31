@@ -1,0 +1,7 @@
+#!/bin/bash
+
+NEXTCLOUD_DATA_DIR="/var/www/html"
+
+sed -i '/^);$/d' "$NEXTCLOUD_DATA_DIR"/config/config.php
+
+cat previews.conf >> "$NEXTCLOUD_DATA_DIR"/config/config.php

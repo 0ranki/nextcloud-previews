@@ -1,4 +1,4 @@
-FROM docker.io/library/nextcloud:23.0.0
+FROM docker.io/library/nextcloud:23.0.1
 
 RUN apt-get update &&\
     apt-get install -y \
@@ -9,6 +9,8 @@ RUN apt-get update &&\
     mkdir /var/log/supervisord /var/run/supervisord
 
 COPY $GITHUB_WORKSPACE/supervisord.conf /
+COPY $GITHUB_WORKSPACE/enable-previews /usr/local/bin
+COPY $GITHUB_WORKSPACE/previews.conf /
 
 ENV NEXTCLOUD_UPDATE=1
 
