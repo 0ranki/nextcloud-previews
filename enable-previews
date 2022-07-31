@@ -1,7 +1,10 @@
 #!/bin/bash
 
-NEXTCLOUD_DATA_DIR="/var/www/html"
-
-sed -i '/^);$/d' "$NEXTCLOUD_DATA_DIR"/config/config.php
-
-cat previews.conf >> "$NEXTCLOUD_DATA_DIR"/config/config.php
+if curl -sL localhost/status.php | grep -qF '"installed":true,'; then
+	NEXTCLOUD_DATA_DIR="/var/www/html"
+	sed -i '/^);$/d' "$NEXTCLOUD_DATA_DIR"/config/config.php
+	cat /previews.conf >> "$NEXTCLOUD_DATA_DIR"/config/config.php
+	echo "Enabled video previews in $NEXTCLOUD_DATA_DIR/config/config.php"
+else
+	echo "Please finish the initial setup and try again"
+fi
