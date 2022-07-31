@@ -2,6 +2,7 @@
 
 if curl -sL localhost/status.php | grep -qF '"installed":true,'; then
 	NEXTCLOUD_DATA_DIR="/var/www/html"
+	cp "$NEXTCLOUD_DATA_DIR"/config/config.php "$NEXTCLOUD_DATA_DIR"/config/config.php.bak
 	sed -i '/^);$/d' "$NEXTCLOUD_DATA_DIR"/config/config.php
 	cat /previews.conf >> "$NEXTCLOUD_DATA_DIR"/config/config.php
 	echo "Enabled video previews in $NEXTCLOUD_DATA_DIR/config/config.php"
