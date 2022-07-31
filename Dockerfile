@@ -9,7 +9,6 @@ RUN apt-get update &&\
     mkdir /var/log/supervisord /var/run/supervisord
 
 COPY supervisord.conf /
-COPY apache2.conf /etc/apache2/
 
 ENV NEXTCLOUD_UPDATE=1
 
