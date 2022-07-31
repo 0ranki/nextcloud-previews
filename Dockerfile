@@ -8,7 +8,7 @@ RUN apt-get update &&\
     rm -rf /var/lib/apt/lists/* &&\
     mkdir /var/log/supervisord /var/run/supervisord
 
-COPY supervisord.conf /
+COPY $GITHUB_WORKSPACE/supervisord.conf /
 
 ENV NEXTCLOUD_UPDATE=1
 
