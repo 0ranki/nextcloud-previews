@@ -24,7 +24,7 @@ podman pull ghcr.io/0ranki/nextcloud-previews/nextcloud:24.0.3
 ```
 
 The images have a convenience script installed that modifies `config.php` to actually
-enable the video preview generation. To use it, run
+enable the video preview generation. To use it, finish the first run wizard first, then
 ```
 podman run <name-of-nc-container> enable-previews
 ```
