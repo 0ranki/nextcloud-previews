@@ -15,8 +15,9 @@ For instructions on using these images, go to https://github.com/nextcloud/docke
 and https://docs.nextcloud.com/.
 
 Simply use `ghcr.io/0ranki/nextcloud-previews/nextcloud:<version>`
-instead of `docker.io/library/nextcloud`. At the moment the images don't use the `latest`
-tag, so you'll need to use a specific version.
+instead of `docker.io/library/nextcloud`. A `latest` tag is also included, but since
+the process of tagging it is manual, you should check that the digests match with the
+latest versioned image, in case I forgot to tag it.
 
 To pull e.g. version 24.0.3:
 ```
