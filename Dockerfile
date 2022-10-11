@@ -1,10 +1,11 @@
-FROM docker.io/library/nextcloud:24.0.5
+FROM docker.io/library/nextcloud:24.0.6
 
 RUN apt-get update &&\
     apt-get install -y \
     supervisor \
     ffmpeg \
-    libmagickcore-6.q16-6-extra &&\ 
+    libmagickcore-6.q16-6-extra &&\
+	apt clean &&\
     rm -rf /var/lib/apt/lists/* &&\
     mkdir /var/log/supervisord /var/run/supervisord
 
