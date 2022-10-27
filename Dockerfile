@@ -4,7 +4,7 @@ RUN apt-get update &&\
     apt-get install -y \
     supervisor \
     ffmpeg \
-    libmagickcore-6.q16-6-extra &&\
+    libmagickcore-6.q16-6-extra \
 	smbclient &&\
 	apt clean &&\
     rm -rf /var/lib/apt/lists/* &&\
