@@ -1,4 +1,4 @@
-FROM docker.io/library/nextcloud:23.0.10
+FROM docker.io/library/nextcloud:23.0.11
 
 RUN apt-get update &&\
     apt-get install -y \
