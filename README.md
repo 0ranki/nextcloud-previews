@@ -2,8 +2,10 @@
 ## Nextcloud container with preinstalled video preview generation
 
 These are container images built using the official Nextcloud Apache images as
-source, adding the required packages to generate video previews and `supervisord`
-to use `cron` inside the container.
+source, adding the required packages to generate video previews.
+
+Starting from 24.0.9 and 25.0.3 `supervisord` is no longer installed. A separate
+cron container is recommended as per upstream recommendations.
 
 I'll try to keep up with Nextcloud's upstream releases.
 The build itself is automated, but requires a tag to be pushed before triggering,
