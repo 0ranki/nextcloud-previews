@@ -7,7 +7,7 @@ on:
   # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
     tags:
-    - "26*"
+    - "25*"
     # branches: [ "master" ]
 
   # Allows you to run this workflow manually from the Actions tab
@@ -19,7 +19,7 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/')
+
     
     steps:
       - uses: actions/checkout@v3
@@ -30,8 +30,7 @@ jobs:
             github-token: ${{ secrets.GITHUB_TOKEN }} # Provide GITHUB_TOKEN to login into the GitHub Packages
             image-name: nextcloud # Provide only Docker image name
             extract-git-tag: true # Provide flag to extract Docker image tag from git reference
-            additional-image-tags: latest
-            custom-args: --platform=linux/arm64,linux/amd64 # specify target architectures via the 
+            custom-args: --platform=linux/arm64,linux/amd64
     
 #    # Steps represent a sequence of tasks that will be executed as part of the job
 #    steps:
