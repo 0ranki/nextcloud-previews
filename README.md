@@ -9,7 +9,7 @@ cron container is recommended as per upstream recommendations.
 
 **Starting from 26.0.1 and 25.0.6 the builds are multiarch for `linux/amd64` and `linux/arm64`**
 
-**The `latest` tag points to 26.0.x**
+**The `latest` tag points to 27.0.x**
 
 I strongly recommend using a specific version in your docker-compose, kube YAML files or scripts. This will avoid accidentally updating your instance.
 
