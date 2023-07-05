@@ -7,9 +7,9 @@ source, adding the required packages to generate video previews.
 Starting from 24.0.9 and 25.0.3 `supervisord` is no longer installed. A separate
 cron container is recommended as per upstream recommendations.
 
-**Starting from 26.0.1 and 25.0.6 the builds are multiarch for `linux/amd64` and `linux/arm64`**
+### **Starting from 26.0.1 and 25.0.6 the builds are multiarch for `linux/amd64` and `linux/arm64`**
 
-**The `latest` tag points to 27.0.x**
+### **The `latest` tag points to 27.0.x**
 
 I strongly recommend using a specific version in your docker-compose, kube YAML files or scripts. This will avoid accidentally updating your instance.
 
@@ -25,7 +25,7 @@ and https://docs.nextcloud.com/.
 Simply use `ghcr.io/0ranki/nextcloud-previews/nextcloud:<version>`
 instead of `docker.io/library/nextcloud`.
 
-### `latest` currently points to 26.0.x
+### `latest` currently points to 27.0.x
 
 To pull e.g. version 24.0.3:
 ```
