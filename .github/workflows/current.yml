@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: "59 23 * * *"
+    - cron: "39 20 * * *"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -33,7 +33,7 @@ jobs:
             github-token: ${{ secrets.GITHUB_TOKEN }} # Provide GITHUB_TOKEN to login into the GitHub Packages
             image-name: nextcloud # Provide only Docker image name
             extract-git-tag: true # Provide flag to extract Docker image tag from git reference
-            additional-image-tags: latest
+            additional-image-tags: latest 27
             custom-args: --platform=linux/arm64,linux/amd64 # specify target architectures via the 
     
 #    # Steps represent a sequence of tasks that will be executed as part of the job
