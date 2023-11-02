@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Build and Publish Tag Docker image
+      - name: Daily image build
         uses: VaultVulp/gp-docker-action@1.6.0
         with:
             github-token: ${{ secrets.GITHUB_TOKEN }}
