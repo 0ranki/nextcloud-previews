@@ -4,16 +4,9 @@
 These are container images built using the official Nextcloud Apache images as
 source, adding the required packages to generate video previews.
 
-Starting from 24.0.9 and 25.0.3 `supervisord` is no longer installed. A separate
-cron container is recommended as per upstream recommendations.
-
-### **Starting from 26.0.1 and 25.0.6 the builds are multiarch for `linux/amd64` and `linux/arm64`**
-
-### **The `latest` tag points to 27.1.x**
+A daily build runs from the master branch. [![Automatic Build](https://github.com/0ranki/nextcloud-previews/actions/workflows/daily.yml/badge.svg)](https://github.com/0ranki/nextcloud-previews/actions/workflows/daily.yml)
 
 I strongly recommend using a specific major version in your docker-compose, kube YAML files or scripts. This will avoid accidentally updating your instance.
-
-A daily build runs from the master branch. [![Automatic Build](https://github.com/0ranki/nextcloud-previews/actions/workflows/daily.yml/badge.svg)](https://github.com/0ranki/nextcloud-previews/actions/workflows/daily.yml)
 
 ## Usage
 
@@ -21,7 +14,7 @@ A daily build runs from the master branch. [![Automatic Build](https://github.co
 
 [Running the Podman pod as a service with systemd](SYSTEMD.md)
 
-For instructions on using these images, go to https://github.com/nextcloud/docker
+For detailed instructions on using these images, go to https://github.com/nextcloud/docker
 and https://docs.nextcloud.com/.
 
 Simply use `ghcr.io/0ranki/nextcloud-previews/nextcloud:<version>`
