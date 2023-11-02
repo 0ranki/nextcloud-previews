@@ -1,8 +1,10 @@
 ## Running the pod as a systemd service
 
+- Follow the instructions in [PODMAN.md](PODMAN.md) to configure the pod
 - Copy `examples/pod-nextcloud.service` to your (preferably non-root) user's `$HOME/.config/systemd/user/` folder (create the directories if they don't exist yet)
 - Check that the paths are correct in the file. You can rename the service file too.
 - `sudo loginctl enable-linger $USER` to allow the user's services keep running after logout
+- If the pod is already started manually with `podman kube play`, stop it
 - `systemctl --user enable --now pod-nextcloud.service`
 
 To update all the images and restart, run `systemctl --user restart pod-nextcloud.service`.
