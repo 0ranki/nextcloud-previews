@@ -1,7 +1,7 @@
 # nextcloud-previews
 ## Nextcloud container with preinstalled video preview generation
 
-[![Automatic Build](https://github.com/0ranki/nextcloud-previews/actions/workflows/current.yml/badge.svg)](https://github.com/0ranki/nextcloud-previews/actions/workflows/current.yml)
+[![Automatic Build](https://github.com/0ranki/nextcloud-previews/actions/workflows/daily.yml/badge.svg)](https://github.com/0ranki/nextcloud-previews/actions/workflows/daily.yml)
 
 These are container images built using the official Nextcloud Apache images as
 source, adding the required packages to generate video previews.
