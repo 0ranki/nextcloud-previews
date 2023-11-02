@@ -11,23 +11,25 @@ cron container is recommended as per upstream recommendations.
 
 ### **Starting from 26.0.1 and 25.0.6 the builds are multiarch for `linux/amd64` and `linux/arm64`**
 
-### **The `latest` tag points to 27.0.x**
+### **The `latest` tag points to 27.1.x**
 
-I strongly recommend using a specific version in your docker-compose, kube YAML files or scripts. This will avoid accidentally updating your instance.
+I strongly recommend using a specific major version in your docker-compose, kube YAML files or scripts. This will avoid accidentally updating your instance.
 
-I'll try to keep up with Nextcloud's upstream releases.
-The build itself is automated, but requires a tag to be pushed before triggering,
-so there may be a slight delay before a new image version is built. The plan is to
-automate the whole process to automatically build images after upstream release.
+A daily build runs from the master branch. [![Automatic Build](https://github.com/0ranki/nextcloud-previews/actions/workflows/daily.yml/badge.svg)](https://github.com/0ranki/nextcloud-previews/actions/workflows/daily.yml)
 
 ## Usage
+
+[Running using Podman Kube YAML](PODMAN.md)
+
+[Running the Podman pod as a service with systemd](SYSTEMD.md)
+
 For instructions on using these images, go to https://github.com/nextcloud/docker
 and https://docs.nextcloud.com/.
 
 Simply use `ghcr.io/0ranki/nextcloud-previews/nextcloud:<version>`
 instead of `docker.io/library/nextcloud`.
 
-### `latest` currently points to 27.0.x
+### `latest` currently points to 27.1.x
 
 To pull e.g. version 24.0.3:
 ```

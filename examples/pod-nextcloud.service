@@ -1,0 +1,18 @@
+[Unit]
+Description=Podman pod - Nextcloud-previews
+After=network-online.target
+AssertPathExists=/path/to/nextcloud
+
+[Service]
+Type=forking
+Restart=on-failure
+RestartSec=30
+ExecStartPre=/path/to/nextcloud/nextcloud/bin/fix-htaccess
+ExecStart=podman play kube --replace /path/to/nextcloud/nextcloud/nextcloud.yaml
+ExecStop=podman play kube --down /path/to/nextcloud/nextcloud/nextcloud.yaml
+#ExecStopPost=podman volume export -o /path/to/nextcloud/nextcloud/clamav-db.tar clamav-db
+#ExecStopPost=podman volume export -o /path/to/nextcloud/nextcloud/nextcloud-psql.tar nextcloud-psql
+#ExecStopPost=/path/to/nextcloud/nextcloud/bin/nc-logrotate.sh
+
+[Install]
+WantedBy=default.target
