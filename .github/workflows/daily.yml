@@ -1,6 +1,10 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Automatic Build
+name: Daily build
+
+env:
+  NEXTCLOUD_UPSTREAM_VERSION: 27.1.3
+  IMAGE_MAJOR_VERSION: 27
 
 # Controls when the workflow will run
 on:
@@ -10,20 +14,19 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  build_daily:
+  daily_build:
     runs-on: ubuntu-latest
     
     steps:
       - uses: actions/checkout@v3
 
-      - name: Daily image build
+      - name: Daily build
         uses: VaultVulp/gp-docker-action@1.6.0
         with:
             github-token: ${{ secrets.GITHUB_TOKEN }}
             image-name: nextcloud
             extract-git-tag: false
-            additional-image-tags: 27 27.1.3
-            custom-args: --platform=linux/arm64,linux/amd64
+            additional-image-tags: ${{ env.IMAGE_MAJOR_VERSION }} ${{ env.NEXTCLOUD_UPSTREAM_VERSION }}
+            custom-args: --platform=linux/arm64,linux/amd64 --build-arg="NEXTCLOUD_UPSTREAM_VERSION=${{ env.NEXTCLOUD_UPSTREAM_VERSION }}"
 
