@@ -1,4 +1,5 @@
-FROM docker.io/library/nextcloud:27.1.3
+ARG NEXTCLOUD_UPSTREAM_VERSION=27.1.3
+FROM docker.io/library/nextcloud:${NEXTCLOUD_UPSTREAM_VERSION}
 
 RUN apt-get update && \
     apt-get install -y \
