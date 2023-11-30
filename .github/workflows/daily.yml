@@ -28,4 +28,4 @@ jobs:
             image-name: nextcloud
             extract-git-tag: false
             additional-image-tags: ${{ env.IMAGE_MAJOR_VERSION }} ${{ env.NEXTCLOUD_UPSTREAM_VERSION }}
-            custom-args: --build-arg=NEXTCLOUD_UPSTREAM_VERSION=${{env.NEXTCLOUD_UPSTREAM_VERSION}} --platform=linux/amd64,linux/arm64
+            custom-args: "--build-arg=NEXTCLOUD_UPSTREAM_VERSION=${{env.NEXTCLOUD_UPSTREAM_VERSION}} --platform=linux/amd64,linux/arm64"
