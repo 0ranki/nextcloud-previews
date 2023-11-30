@@ -8,6 +8,11 @@ A daily build runs from the master branch. [![Automatic Build](https://github.co
 
 I strongly recommend using a specific major version in your docker-compose, kube YAML files or scripts. This will avoid accidentally updating your instance.
 
+### Update to the image name
+Starting from version 27.1.4 the image is the same as the repo, **`ghcr.io/0ranki/nextcloud-previews`**
+
+The old `ghcr.io/0ranki/nextcloud-previews/nextcloud` still works, but pushes will stop at some point in the future.
+
 ## Usage
 
 [Running using Podman Kube YAML](PODMAN.md)
@@ -17,14 +22,14 @@ I strongly recommend using a specific major version in your docker-compose, kube
 For detailed instructions on using these images, go to https://github.com/nextcloud/docker
 and https://docs.nextcloud.com/.
 
-Simply use `ghcr.io/0ranki/nextcloud-previews/nextcloud:<version>`
+Simply use `ghcr.io/0ranki/nextcloud-previews:<version>`
 instead of `docker.io/library/nextcloud`.
 
 ### `latest` currently points to 27.1.x
 
-To pull e.g. version 24.0.3:
+To pull e.g. version 27.1.4:
 ```
-podman pull ghcr.io/0ranki/nextcloud-previews/nextcloud:24.0.3
+podman pull ghcr.io/0ranki/nextcloud-previews:27.1.4
 ```
 
 The images have a convenience script installed that modifies `config.php` to actually
