@@ -1,4 +1,4 @@
-ARG TARGET_PLATFORM=linux/amd64,linux/arm64
+
 ARG NEXTCLOUD_UPSTREAM_VERSION
 FROM docker.io/library/nextcloud:${NEXTCLOUD_UPSTREAM_VERSION}
 
