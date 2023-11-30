@@ -111,7 +111,7 @@ spec:
 
   - name: app
     ## Remember to change cron container version!
-    image: ghcr.io/0ranki/nextcloud-previews/nextcloud:latest
+    image: ghcr.io/0ranki/nextcloud-previews:latest
     ## Remember to change cron container version!
     #imagePullPolicy: never
     ports:
@@ -134,7 +134,7 @@ spec:
 
   - name: cron
     # Remember to change main image version!
-    image: ghcr.io/0ranki/nextcloud-previews/nextcloud:latest
+    image: ghcr.io/0ranki/nextcloud-previews:latest
     # Remember to change main image version!
       #imagePullPolicy: never
     args:
