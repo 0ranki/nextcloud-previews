@@ -72,8 +72,8 @@ data:
     NEXTCLOUD_ADMIN_USER: administrator
     NEXTCLOUD_ADMIN_PASSWORD: adminPassw0rd
     NEXTCLOUD_TRUSTED_DOMAINS: cloud.example.com 192.168.123.22
-    REDIS_HOST: 127.0.0.1
-    REDIS_PORT: 6379
+    REDIS_HOST: 127.0.0.1  # Don't change this
+    REDIS_PORT: 6379       # or this
     TZ: Europe/Helsinki
     ## Optionally tweak these ##
     PHP_MEMORY_LIMIT: 3G
