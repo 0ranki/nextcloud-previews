@@ -42,7 +42,7 @@ Podman automatically pulls the images when using `kube play`
 
 ### Cloudflare tunnel (optional)
 In the end there's a container for Cloudflare tunnel. To use a CF tunnel, create a tunnel in the CF dashboard,
-point the tunnel to `http://localhost:80`, uncomment the section and
+point the tunnel to `http://localhost:8082`, uncomment the section and
 insert your token as the last argument for the container CMD, for example:
 
 ```
@@ -179,7 +179,7 @@ spec:
     #imagePullPolicy: never
     ports:
     - containerPort: 80
-      hostPort: 8082
+      hostPort: 8082                                      ## Change host listening port here
     envFrom:
     - configMapRef:
         name: nextcloud-config
