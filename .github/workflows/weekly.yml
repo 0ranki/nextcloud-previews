@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Daily build
+name: Weekly build
 
 env:
   NEXTCLOUD_UPSTREAM_VERSION: 27.1.8
