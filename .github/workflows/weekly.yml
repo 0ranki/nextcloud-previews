@@ -15,7 +15,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  daily_build:
+  weekly_build:
     runs-on: ubuntu-latest
     
     steps:
@@ -32,7 +32,7 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - uses: docker/build-push-action@v5
-        name: Daily build
+        name: Weekly build
         with:
           context: .
           push: true
