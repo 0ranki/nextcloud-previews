@@ -3,7 +3,7 @@
 name: Weekly build
 
 env:
-  NEXTCLOUD_UPSTREAM_VERSION: 27.1.8
+  NEXTCLOUD_UPSTREAM_VERSION: 27.1.9
   IMAGE_MAJOR_VERSION: 27
 
 # Controls when the workflow will run
