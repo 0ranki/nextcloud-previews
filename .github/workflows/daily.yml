@@ -3,13 +3,16 @@
 name: Daily build
 
 env:
-  NEXTCLOUD_UPSTREAM_VERSION: 27.1.10
-  IMAGE_MAJOR_VERSION: 27
+  NEXTCLOUD_UPSTREAM_VERSION: 28.0.6
+  IMAGE_MAJOR_VERSION: 28
 
 # Controls when the workflow will run
 on:
   schedule:
     - cron: "39 20 * * *"
+  push:
+    tags:
+      - "*"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
