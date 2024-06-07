@@ -5,7 +5,7 @@
 These are container images built using the official Nextcloud Apache images as
 source, adding the required packages to generate video previews.
 
-A daily build runs from the master branch.
+Images are built daily using GitHub Actions.
 
 I strongly recommend using a specific major version in your docker-compose, kube YAML files or scripts. This will avoid accidentally updating your instance.
 
