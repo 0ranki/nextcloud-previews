@@ -1,4 +1,4 @@
-# nextcloud-previews ![`latest` version](https://img.shields.io/github/v/tag/0ranki/nextcloud-previews) [![Automatic Build](https://github.com/0ranki/nextcloud-previews/actions/workflows/daily.yml/badge.svg)](https://github.com/0ranki/nextcloud-previews/actions/workflows/weekly.yml)
+# nextcloud-previews ![`latest` version](https://img.shields.io/github/v/tag/0ranki/nextcloud-previews) [![Daily build](https://github.com/0ranki/nextcloud-previews/actions/workflows/current.yml/badge.svg)](https://github.com/0ranki/nextcloud-previews/actions/workflows/current.yml)
 
 ## Nextcloud container with preinstalled video preview generation
 
