@@ -1,10 +1,11 @@
-# nextcloud-previews
+# nextcloud-previews ![`latest` version](https://img.shields.io/github/v/tag/0ranki/nextcloud-previews) [![Automatic Build](https://github.com/0ranki/nextcloud-previews/actions/workflows/daily.yml/badge.svg)](https://github.com/0ranki/nextcloud-previews/actions/workflows/weekly.yml)
+
 ## Nextcloud container with preinstalled video preview generation
 
 These are container images built using the official Nextcloud Apache images as
 source, adding the required packages to generate video previews.
 
-A weekly build runs from the master branch. [![Automatic Build](https://github.com/0ranki/nextcloud-previews/actions/workflows/daily.yml/badge.svg)](https://github.com/0ranki/nextcloud-previews/actions/workflows/weekly.yml)
+A daily build runs from the master branch.
 
 I strongly recommend using a specific major version in your docker-compose, kube YAML files or scripts. This will avoid accidentally updating your instance.
 
