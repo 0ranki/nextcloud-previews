@@ -12,7 +12,7 @@ I strongly recommend using a specific major version in your docker-compose, kube
 ### Update to the image name
 Starting from version 27.1.4 the image is the same as the repo, **`ghcr.io/0ranki/nextcloud-previews`**
 
-The old `ghcr.io/0ranki/nextcloud-previews/nextcloud` still works, but pushes will stop at some point in the future.
+> **Tagging the old `ghcr.io/0ranki/nextcloud-previews/nextcloud` has been stopped.**
 
 ## Usage
 
