@@ -3,7 +3,7 @@
 name: Daily build
 
 env:
-  NEXTCLOUD_UPSTREAM_VERSION: 28.0.6
+  NEXTCLOUD_UPSTREAM_VERSION: 28.0.7
   IMAGE_MAJOR_VERSION: 28
 
 # Controls when the workflow will run
