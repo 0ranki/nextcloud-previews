@@ -49,3 +49,6 @@ feature missing a bit late)
 ## Disclaimer
 Nextcloud is a registered trademark of Nextcloud GmbH, and I am in no way affiliated
 with them. These images are built for personal use and for learning GitHub actions.
+
+<sup><sub>The github mirror is used to build the container images.
+Mirrored from https://git.oranki.net/jarno/nextcloud-previews</sub></sup>
