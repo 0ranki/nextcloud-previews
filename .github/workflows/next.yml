@@ -1,4 +1,4 @@
-name: Daily build
+name: Daily build (next)
 
 env:
   NEXTCLOUD_UPSTREAM_VERSION: 29.0.4
