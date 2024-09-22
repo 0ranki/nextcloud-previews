@@ -1,7 +1,7 @@
 name: Daily build (next)
 
 env:
-  NEXTCLOUD_UPSTREAM_VERSION: 29.0.6
+  NEXTCLOUD_UPSTREAM_VERSION: 29.0.7
   IMAGE_MAJOR_VERSION: 29
   # Remember to change on.push.tags too!
 
