@@ -1,8 +1,8 @@
 name: Daily build (next)
 
 env:
-  NEXTCLOUD_UPSTREAM_VERSION: 29.0.7
-  IMAGE_MAJOR_VERSION: 29
+  NEXTCLOUD_UPSTREAM_VERSION: 30.0.0
+  IMAGE_MAJOR_VERSION: 30
   # Remember to change on.push.tags too!
 
 on:
@@ -10,7 +10,7 @@ on:
     - cron: "39 20 * * *"
   push:
     tags:
-      - "29*"
+      - "30*"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
