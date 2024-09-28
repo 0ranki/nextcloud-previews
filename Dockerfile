@@ -6,7 +6,8 @@ RUN apt-get update && \
     apt-get install -y \
     ffmpeg \
     libmagickcore-6.q16-6-extra \
-	smbclient &&\
+	smbclient \
+	aria2 &&\
 	apt clean &&\
     rm -rf /var/lib/apt/lists/*
 
