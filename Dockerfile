@@ -7,7 +7,8 @@ RUN apt-get update && \
     ffmpeg \
     libmagickcore-6.q16-6-extra \
 	smbclient \
-	aria2 &&\
+	aria2 \
+    tini &&\
 	apt clean &&\
     rm -rf /var/lib/apt/lists/*
 
