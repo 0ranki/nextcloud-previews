@@ -9,11 +9,6 @@ Images are built daily using GitHub Actions.
 
 I strongly recommend using a specific major version in your docker-compose, kube YAML files or scripts. This will avoid accidentally updating your instance.
 
-### Update to the image name
-Starting from version 27.1.4 the image is the same as the repo, **`ghcr.io/0ranki/nextcloud-previews`**
-
-> **Tagging the old `ghcr.io/0ranki/nextcloud-previews/nextcloud` has been stopped.**
-
 ## Usage
 
 [Running using Podman Kube YAML](PODMAN.md)
