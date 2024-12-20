@@ -21,8 +21,7 @@ and https://docs.nextcloud.com/.
 Simply use `ghcr.io/0ranki/nextcloud-previews:<version>`
 instead of `docker.io/library/nextcloud`.
 
-### `latest` currently points to 29.0.x
-#### `next` currently points to 30.0.x
+### `latest` currently points to 30.0.x
 
 The latest version stays one version behind the current upstream latest image.
 In addition to the `latest` tag, there's also the `next` tag, which is the latest released

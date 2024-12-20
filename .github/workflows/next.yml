@@ -6,8 +6,8 @@ env:
   # Remember to change on.push.tags too!
 
 on:
-  schedule:
-    - cron: "39 20 * * *"
+  schedule: []
+  #  - cron: "39 20 * * *"
   push:
     tags:
       - "30*"
