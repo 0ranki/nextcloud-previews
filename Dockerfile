@@ -14,5 +14,9 @@ RUN apt-get update && \
 
 COPY $GITHUB_WORKSPACE/enable-previews /usr/local/bin
 COPY $GITHUB_WORKSPACE/previews.conf /
+COPY $GITHUB_WORKSPACE/dbup.sh /docker-entrypoint-hooks.d/post-installation/
+COPY $GITHUB_WORKSPACE/dbup.sh /docker-entrypoint-hooks.d/post-upgrade/
+
+RUN chmod +x /docker-entrypoint-hooks.d/post-installation/dbup.sh && chmod +x /docker-entrypoint-hooks.d/post-upgrade/dbup.sh
 
 ENV NEXTCLOUD_UPDATE=1
