@@ -4,11 +4,11 @@ FROM docker.io/library/nextcloud:${NEXTCLOUD_UPSTREAM_VERSION}
 
 RUN apt-get update && \
     apt-get install -y \
-    ffmpeg \
-    libmagickcore-6.q16-6-extra \
+	ffmpeg \
+	libmagickcore-6.q16-6-extra \
 	smbclient \
 	aria2 \
-    tini &&\
+	poppler-utils &&\
 	apt clean &&\
     rm -rf /var/lib/apt/lists/*
 
