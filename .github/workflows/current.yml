@@ -42,4 +42,3 @@ jobs:
           tags: |
             ghcr.io/0ranki/nextcloud-previews:${{ env.NEXTCLOUD_UPSTREAM_VERSION }}
             ghcr.io/0ranki/nextcloud-previews:${{ env.IMAGE_MAJOR_VERSION }}
-            ghcr.io/0ranki/nextcloud-previews:latest
