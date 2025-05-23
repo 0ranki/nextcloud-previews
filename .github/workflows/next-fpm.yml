@@ -1,8 +1,8 @@
-name: Daily build (current)
+name: Daily build FPM image (next)
 
 env:
-  NEXTCLOUD_UPSTREAM_VERSION: 30.0.11
-  IMAGE_MAJOR_VERSION: 30
+  NEXTCLOUD_UPSTREAM_VERSION: 31.0.5-fpm
+  IMAGE_MAJOR_VERSION: 31-fpm
   # Remember to change on.push.tags too!
 
 on:
@@ -10,7 +10,7 @@ on:
     - cron: "39 20 * * *"
   push:
     tags:
-      - "30.*"
+      - "31*"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -33,7 +33,7 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - uses: docker/build-push-action@v5
-        name: Daily build - current ( ${{ env.NEXTCLOUD_UPSTREAM_VERSION }} )
+        name: Daily build - next ( ${{ env.NEXTCLOUD_UPSTREAM_VERSION }} )
         with:
           context: .
           file: Dockerfile
@@ -43,3 +43,5 @@ jobs:
           tags: |
             ghcr.io/0ranki/nextcloud-previews:${{ env.NEXTCLOUD_UPSTREAM_VERSION }}
             ghcr.io/0ranki/nextcloud-previews:${{ env.IMAGE_MAJOR_VERSION }}
+            ghcr.io/0ranki/nextcloud-previews:next-fpm
+            ghcr.io/0ranki/nextcloud-previews:latest-fpm

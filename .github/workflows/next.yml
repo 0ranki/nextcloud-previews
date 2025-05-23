@@ -36,6 +36,7 @@ jobs:
         name: Daily build - next ( ${{ env.NEXTCLOUD_UPSTREAM_VERSION }} )
         with:
           context: .
+          file: Dockerfile
           push: true
           platforms: linux/amd64,linux/arm64
           build-args: NEXTCLOUD_UPSTREAM_VERSION=${{ env.NEXTCLOUD_UPSTREAM_VERSION }}
