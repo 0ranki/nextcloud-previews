@@ -5,6 +5,13 @@
 These are container images built using the official Nextcloud Apache images as
 source, adding the required packages to generate video previews.
 
+In addition to video preview requirements the image also has:
+- poppler-utils for LibreSign
+- 'maintenance_window_start' set to 1
+  - Change with `/var/www/html/occ config:system:set maintenance_window_start --value=X`, where X is the hour to start maintenance window in UTC
+- 'default_phone_region' set to FI
+  - Change with `/var/www/html/occ config:system:set default_phone_region --value="EN"`, replace `EN` with your country code
+
 Images are built daily using GitHub Actions.
 
 I strongly recommend using a specific major version in your docker-compose, kube YAML files or scripts. This will avoid accidentally updating your instance.
